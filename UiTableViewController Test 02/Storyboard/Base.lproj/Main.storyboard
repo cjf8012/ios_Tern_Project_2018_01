@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8dV-7b-jJ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8dV-7b-jJ9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,13 +12,13 @@
         <!--My Table View Controller-->
         <scene sceneID="lcF-Nd-bSY">
             <objects>
-                <tableViewController id="cFp-Sf-CKj" customClass="MyTableViewController" customModule="UiTableViewController_Test_02" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="cFp-Sf-CKj" customClass="MyTableViewController" customModule="JaeHo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lJF-Ab-udf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RE" rowHeight="80" id="fwc-xZ-cR3" customClass="FoodStoreTableViewCell" customModule="UiTableViewController_Test_02" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RE" rowHeight="80" id="fwc-xZ-cR3" customClass="FoodStoreTableViewCell" customModule="JaeHo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fwc-xZ-cR3" id="zv7-Jj-cQO">
@@ -82,51 +82,16 @@
                             <outlet property="delegate" destination="cFp-Sf-CKj" id="JhQ-2C-NdH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fHx-4e-WvK">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Map" id="kxV-Wm-Hc0">
-                            <connections>
-                                <segue destination="7Tl-bp-4Uh" kind="show" identifier="totalMapView" id="fnn-kt-IWm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="fHx-4e-WvK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppm-sE-6qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="59.820089955022496"/>
         </scene>
-        <!--Total Map View Controller-->
-        <scene sceneID="iZh-Nt-2iR">
-            <objects>
-                <viewController id="7Tl-bp-4Uh" customClass="TotalMapViewController" customModule="UiTableViewController_Test_02" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KHo-0W-dqN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zAh-j5-v9J">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="zAh-j5-v9J" firstAttribute="leading" secondItem="8UH-Aw-rNU" secondAttribute="leading" id="UYl-8Z-aX1"/>
-                            <constraint firstItem="8UH-Aw-rNU" firstAttribute="bottom" secondItem="zAh-j5-v9J" secondAttribute="bottom" id="Ydu-BQ-FwK"/>
-                            <constraint firstItem="8UH-Aw-rNU" firstAttribute="trailing" secondItem="zAh-j5-v9J" secondAttribute="trailing" id="deD-wa-g2z"/>
-                            <constraint firstItem="zAh-j5-v9J" firstAttribute="top" secondItem="8UH-Aw-rNU" secondAttribute="top" id="spU-xz-RpV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8UH-Aw-rNU"/>
-                    </view>
-                    <connections>
-                        <outlet property="totalMapView" destination="zAh-j5-v9J" id="lZK-UG-mqE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CtE-7I-XWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1652" y="578"/>
-        </scene>
         <!--Detail View Controller-->
         <scene sceneID="dCS-vR-Y9R">
             <objects>
-                <viewController id="rTk-ZX-IXD" customClass="DetailViewController" customModule="UiTableViewController_Test_02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rTk-ZX-IXD" customClass="DetailViewController" customModule="JaeHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LqA-CH-vwv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +123,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapCell" rowHeight="240" id="mdG-J3-gnd" customClass="MapTableViewCell" customModule="UiTableViewController_Test_02" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapCell" rowHeight="240" id="mdG-J3-gnd" customClass="MapTableViewCell" customModule="JaeHo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mdG-J3-gnd" id="cxd-sh-8J4">
@@ -186,6 +151,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxD-VX-dhl">
+                                <rect key="frame" x="336" y="325" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="rTk-ZX-IXD" eventType="touchUpInside" id="o8N-hi-xuD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -209,12 +182,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTd-kS-vSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="-61"/>
+            <point key="canvasLocation" x="1729" y="60"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="YDc-J2-SDr">
             <objects>
-                <viewController id="wov-YG-iKO" customClass="MapViewController" customModule="UiTableViewController_Test_02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wov-YG-iKO" customClass="MapViewController" customModule="JaeHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S10-Up-qc7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJf-NZ-qX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2810" y="-45"/>
+            <point key="canvasLocation" x="2489" y="60"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="STE-sq-WCd">
@@ -259,7 +232,4 @@
             <point key="canvasLocation" x="192" y="60.26986506746627"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Map" width="25" height="25"/>
-    </resources>
 </document>
